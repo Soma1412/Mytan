@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-    varidates :nickname,       presence: true
-    varidates :goal,           presence: true
+    validates :nickname,       presence: true
+    validates :goal,           presence: true
     # has_many :words
 
 end
