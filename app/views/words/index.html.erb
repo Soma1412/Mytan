@@ -1,1 +1,8 @@
 <h1>Mytan<h1>
+<ul class='list-right'>
+<li><%= link_to '新規登録',new_user_registration_path, class:'sign_up' %>
+<li><%= link_to 'ログイン',new_user_session_path, class:'log_in'%>
+
+<%= link_to(root_path, class: 'word-btn' ) do%>
+  <span class='word-btn-text'>追加する</span>
+  <% end %>
