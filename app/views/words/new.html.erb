@@ -1,0 +1,54 @@
+<h1>見たことない単語だ<h1>
+  <div class="items-sell-main">
+    <h1 class="items-sell-title">単語の情報を入力</h2>
+    <%= form_with model: @word, local: true do |f| %>
+    <%# <%= render 'shared/error_messages', model: f.object %> 
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+      </div>
+      <div class="click-upload">
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+
+    <div class="items-detail">
+      <div class="weight-bold-text"></div>
+      <div class="form">
+        <div class="weight-bold-text">
+          品詞
+          <span class="indispensable"></span>
+        </div>
+         <%= f.collection_select(:speech_id, Speech.all, :id, :name, {}, {class:"select-box", id:"word-speech"}) %> 
+    </div>
+
+    <div class="new-words">
+      <div class="weight-bold-text">
+        英単語
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :word_name, class:"words-text", id:"word-name", placeholder:"英単語入力", maxlength:"40" %>
+      
+      <div class="words-meaning">
+      <div class="weight-bold-text">
+        意味
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :meaning, class:"words-text", id:"word-meaning", placeholder:"英単語入力", maxlength:"40" %>
+      
+      <div class="words-example">
+        <div class="weight-bold-text">
+          例文
+        </div>
+        <%= f.text_area :example, class:"wordss-text", id:"word-example", placeholder:"例文入力" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "単語帳に追加" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
