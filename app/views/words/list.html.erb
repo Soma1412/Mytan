@@ -1,1 +1,15 @@
 単語list
+<%=link_to 'もどる', root_path, class:"back-btn" %>
+<%# <% locals: {word: @word} %> 
+<%# <ul class='word-list'> %>
+ <%# <% @words.each do |word| %>  
+   <%# <li class= 'list'> %> 
+   <%# <div class='word-img-content'> %> 
+     <%# <%= image_tag word.image, class: "word-img" %>
+  <%# <% end %> 
+<div class='word-info'>
+<span><%= @word.word_name %></span>
+</div>
+<%# <% end %>  
+<%# </ul> %>
+  

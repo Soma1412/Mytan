@@ -4,10 +4,10 @@
 <li><%= link_to 'ログイン',new_user_session_path, class:'log_in'%>
 <li><%= link_to(new_word_path, class: 'word-btn' ) do%>
   <span class='word-btn-text'>追加する</span>
-  <% end %>
+<% end %>
 </li>
 
-<li><%= link_to(list_words_path, class: 'list-btn' ) do%>
+<li><%= link_to list_word_path(current_user), class: 'list-btn'  do%>
   <span class= 'list-btn-text'>単語リスト</span>
   <% end %>
 </li>

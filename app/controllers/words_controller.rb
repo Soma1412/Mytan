@@ -18,6 +18,11 @@ class WordsController < ApplicationController
     @word = Word.new
   end
 
+  def list
+    @word = Word.find(params[:id])
+  end
+
+
 
   private  
 
