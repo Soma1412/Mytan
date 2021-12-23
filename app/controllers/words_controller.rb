@@ -6,7 +6,7 @@ class WordsController < ApplicationController
   end
 
   def create
-    @word = Word.new(word_params)
+      @word = Word.new(word_params)
     if @word.save
       redirect_to root_path
     else
@@ -26,7 +26,7 @@ class WordsController < ApplicationController
   # end
 
   def word_params
-    params.require(:word).permit(:image, :speech_id, :word_name, :meaning, :example ).merge(user_id: current_user.id)
+    params.require(:word).permit(:image, :speech_id, :word_name, :meaning, :example).merge(user_id: current_user.id)
   end
 
 end

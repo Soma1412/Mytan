@@ -12,6 +12,16 @@
       </div>
     </div>
 
+    <div class="items-detail">
+      <div class="weight-bold-text"></div>
+      <div class="form">
+        <div class="weight-bold-text">
+          品詞
+          <span class="indispensable"></span>
+        </div>
+         <%= f.collection_select(:speech_id, Speech.all, :id, :name, {}, {class:"select-box", id:"word-speech"}) %> 
+    </div>
+
     <div class="new-words">
       <div class="weight-bold-text">
         英単語
@@ -24,29 +34,19 @@
         意味
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :word_name, class:"words-text", id:"word-name", placeholder:"英単語入力", maxlength:"40" %>
+      <%= f.text_area :meaning, class:"words-text", id:"word-meaning", placeholder:"英単語入力", maxlength:"40" %>
       
-      <div class="items-explain">
+      <div class="words-example">
         <div class="weight-bold-text">
-          商品の説明
-          <span class="indispensable">必須</span>
+          例文
         </div>
-        <%= f.text_area :explain, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :example, class:"wordss-text", id:"word-example", placeholder:"例文入力" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-  
-    <div class="items-detail">
-      <div class="weight-bold-text">商品の詳細</div>
-      <div class="form">
-        <div class="weight-bold-text">
-          カテゴリー
-          <span class="indispensable">必須</span>
-        </div>
-        <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> 
-    </div>
+
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
-      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%= f.submit "単語帳に追加" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
