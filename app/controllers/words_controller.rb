@@ -19,7 +19,7 @@ class WordsController < ApplicationController
   end
 
   def list
-    @word = Word.find(params[:id])
+    @words = Word.all
   end
 
 
