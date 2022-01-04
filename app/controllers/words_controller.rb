@@ -19,7 +19,7 @@ class WordsController < ApplicationController
   end
 
   def list
-    @words = Word.all
+    @word = Word.all
   end
 
 
