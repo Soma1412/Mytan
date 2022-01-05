@@ -10,6 +10,9 @@
 <span><%= w.word_name %></span>:
 <span><%= w.meaning %></span>
 <span><%= w.example %></span>
+<%= link_to word_path(@word.ids) do %>
+<span class ='edit-btn-text'>編集する</span>
+<% end %>
 </div> 
 <% end %> 
 <%# </ul> %>

@@ -26,6 +26,7 @@ class WordsController < ApplicationController
   end
 
   def show
+    # @word = Word.find(params[:word_id])
   end
 
 
