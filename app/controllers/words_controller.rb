@@ -22,6 +22,9 @@ class WordsController < ApplicationController
     @word = Word.all
   end
 
+  def edit
+  end
+  
 
 
   private  
