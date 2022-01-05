@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :words do
     collection do
       get 'list'
-  end 
-  
+    end 
+  end
 end
