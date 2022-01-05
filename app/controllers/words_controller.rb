@@ -24,7 +24,9 @@ class WordsController < ApplicationController
 
   def edit
   end
-  
+
+  def show
+  end
 
 
   private  
