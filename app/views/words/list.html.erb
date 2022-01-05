@@ -6,7 +6,10 @@
      <%# <%= image_tag word.image, class: "word-img" %>
     
 <div class='word-info'>
-<span><%= word.word_name %></span>
+<span><%= word.speech.name %></span>
+<span><%= word.word_name %></span>:
+<span><%= word.meaning %></span>
+<span><%= word.example %></span>
 </div> 
 <% end %> 
 <%# </ul> %>
