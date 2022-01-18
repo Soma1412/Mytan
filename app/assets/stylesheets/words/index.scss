@@ -1,12 +1,53 @@
 .title {
   background: #eecbcb;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .list-right {
-  background: #eecbcb;
+  background: #000000;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.sign_up{
+  background: -webkit-gradient(linear, right top, left top, from(yellow), to(green));
+  background: -webkit-linear-gradient(right, yellow, green);
+  background: linear-gradient(to left, yellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.log_in{
+  background: -webkit-gradient(linear, right top, left top, from(yellow), to(green));
+  background: -webkit-linear-gradient(right, yellow, green);
+  background: linear-gradient(to left, yellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.log_out{
+  background: -webkit-gradient(linear, right top, left top, from(yellow), to(green));
+  background: -webkit-linear-gradient(right, yellow, green);
+  background: linear-gradient(to left, yellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.word-btn{
+  background: -webkit-gradient(linear, right top, left top, from(yellow), to(green));
+  background: -webkit-linear-gradient(right, yellow, green);
+  background: linear-gradient(to left, yellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.list-btn{
+  background: -webkit-gradient(linear, right top, left top, from(yellow), to(green));
+  background: -webkit-linear-gradient(right, yellow, green);
+  background: linear-gradient(to left, yellow, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
